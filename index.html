@@ -27,7 +27,7 @@
             border-radius: 20px;
             padding: 40px;
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-            max-width: 600px;
+            max-width: 800px;
             width: 100%;
             animation: slideUp 0.6s ease-out;
         }
@@ -49,6 +49,150 @@
             margin-bottom: 30px;
             font-size: 2.2em;
             font-weight: 600;
+        }
+        
+        .guide {
+            background: linear-gradient(135deg, #f8f9ff, #e8f4f8);
+            border-radius: 16px;
+            padding: 25px;
+            margin-bottom: 30px;
+            border: 1px solid #e1e8ed;
+        }
+        
+        .guide h2 {
+            color: #333;
+            margin-bottom: 15px;
+            font-size: 1.4em;
+        }
+        
+        .guide h3 {
+            color: #444;
+            margin-bottom: 12px;
+            font-size: 1.2em;
+        }
+        
+        .guide p {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+        
+        .steps {
+            display: flex;
+            gap: 20px;
+            margin: 20px 0;
+        }
+        
+        .step {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            flex: 1;
+        }
+        
+        .step-number {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+        
+        .step-content strong {
+            color: #333;
+            display: block;
+            margin-bottom: 5px;
+        }
+        
+        .step-content p {
+            margin: 0;
+            font-size: 0.9em;
+        }
+        
+        .button-guide {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin: 20px 0;
+        }
+        
+        .button-info {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 15px;
+            background: white;
+            border-radius: 12px;
+            border: 1px solid #e1e8ed;
+        }
+        
+        .button-demo {
+            padding: 8px 16px;
+            border-radius: 8px;
+            font-size: 12px;
+            font-weight: 600;
+            color: white;
+            text-align: center;
+            min-width: 80px;
+            flex-shrink: 0;
+        }
+        
+        .google-btn-demo {
+            background: linear-gradient(135deg, #4285f4, #34a853);
+        }
+        
+        .linkedin-spit-demo {
+            background: linear-gradient(135deg, #0077b5, #005885);
+        }
+        
+        .linkedin-spce-demo {
+            background: linear-gradient(135deg, #00a0dc, #0077b5);
+        }
+        
+        .linkedin-mu-demo {
+            background: linear-gradient(135deg, #2e8b57, #006400);
+        }
+        
+        .button-desc {
+            flex: 1;
+        }
+        
+        .button-desc strong {
+            color: #333;
+            font-size: 0.95em;
+            display: block;
+            margin-bottom: 5px;
+        }
+        
+        .button-desc p {
+            margin: 0;
+            font-size: 0.85em;
+            line-height: 1.4;
+        }
+        
+        .tips {
+            margin-top: 20px;
+        }
+        
+        .tips ul {
+            margin: 10px 0;
+            padding-left: 20px;
+        }
+        
+        .tips li {
+            color: #666;
+            line-height: 1.5;
+            margin-bottom: 8px;
+            font-size: 0.9em;
+        }
+        
+        .tips strong {
+            color: #333;
         }
         
         .input-group {
@@ -194,12 +338,98 @@
             h1 {
                 font-size: 1.8em;
             }
+            
+            .steps {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .button-guide {
+                grid-template-columns: 1fr;
+            }
+            
+            .button-info {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .button-demo {
+                min-width: auto;
+                align-self: center;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="container">
+            <div class="container">
         <h1>🔍 Search Query Generator</h1>
+        
+        <div class="guide">
+            <h2>📖 How to Use This Tool</h2>
+            <p>This tool helps you quickly search for people across Google and LinkedIn with specific institutional affiliations. Perfect for finding students, alumni, or professionals from Mumbai's engineering colleges.</p>
+            
+            <div class="steps">
+                <div class="step">
+                    <span class="step-number">1</span>
+                    <div class="step-content">
+                        <strong>Enter a Name</strong>
+                        <p>Type the person's name in the search box (e.g., "Om Pandey", "Priya Sharma")</p>
+                    </div>
+                </div>
+                
+                <div class="step">
+                    <span class="step-number">2</span>
+                    <div class="step-content">
+                        <strong>Choose Your Search Platform</strong>
+                        <p>Click any of the search buttons based on where you want to search:</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="button-guide">
+                <div class="button-info google-info">
+                    <div class="button-demo google-btn-demo">Google</div>
+                    <div class="button-desc">
+                        <strong>Google Search</strong>
+                        <p>Searches across the entire web for the person at <em>either</em> Sardar Patel Institute of Technology <em>or</em> Sardar Patel College of Engineering. Great for finding social media profiles, news articles, or any web presence.</p>
+                    </div>
+                </div>
+                
+                <div class="button-info linkedin-info">
+                    <div class="button-demo linkedin-spit-demo">LinkedIn SPIT</div>
+                    <div class="button-desc">
+                        <strong>LinkedIn - SPIT</strong>
+                        <p>Searches LinkedIn specifically for people associated with <strong>Sardar Patel Institute of Technology</strong>. Best for finding current students, alumni, or professionals who studied there.</p>
+                    </div>
+                </div>
+                
+                <div class="button-info linkedin-info">
+                    <div class="button-demo linkedin-spce-demo">LinkedIn SPCE</div>
+                    <div class="button-desc">
+                        <strong>LinkedIn - SPCE</strong>
+                        <p>Searches LinkedIn specifically for people associated with <strong>Sardar Patel College of Engineering</strong>. Perfect for networking within this specific college community.</p>
+                    </div>
+                </div>
+                
+                <div class="button-info linkedin-info">
+                    <div class="button-demo linkedin-mu-demo">LinkedIn MU</div>
+                    <div class="button-desc">
+                        <strong>LinkedIn - University of Mumbai</strong>
+                        <p>Searches LinkedIn for people associated with the broader <strong>University of Mumbai</strong>. Useful when someone lists their university rather than specific college.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="tips">
+                <h3>💡 Pro Tips</h3>
+                <ul>
+                    <li><strong>Try variations:</strong> If "John Smith" doesn't work, try "J Smith" or "John S"</li>
+                    <li><strong>Use Google first:</strong> Start with Google to get a broader view, then narrow down with LinkedIn</li>
+                    <li><strong>Check the preview:</strong> The generated URL appears below so you can see exactly what's being searched</li>
+                    <li><strong>Multiple searches:</strong> Try different buttons for the same person - they might have different affiliations listed</li>
+                </ul>
+            </div>
+        </div>
         
         <div class="input-group">
             <label for="nameInput">Enter Name:</label>
